@@ -64,4 +64,4 @@ Typical installation time: 5 minutes. Download times depend on connection speed;
   ```
   * Parameters `frames_x_offset`, `frames_y_offset`, `frames_dx` (central microlens offets in x and y and microlens pitch, all in units of pixels) can be conveniently determined using the LFDisplay software published by the Levoy lab at Stanford University: http://graphics.stanford.edu/software/LFDisplay/
   * Parameter `indir` should point to a folder containing a series of .tif files containing one frame of raw data each. Files will be read in in alphabetic order.
-  * Replace <psfdir> with the path to the directory containing the PSF file.
+  * Replace `<psfdir>` with the path to the directory containing the PSF file.
