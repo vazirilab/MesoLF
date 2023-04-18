@@ -135,7 +135,7 @@ config_definition = {
     % No. of PSF z planes (symmetric around central plane, value has to be odd) 
     % to use for finding neurons (z planes further out will be discarded after 
     % reconstruction to avoid border artefacts)
-    {'valid_recon_range',           @(x) isinteger(x) && @(x) mod(x,2) == 1,      51};
+    {'valid_recon_range',           @(x) is_positive_integer_or_zero(x) && mod(x,2) == 1,      51};
     
     % 'phase_space' or 'phase_space_peeling'
     {'recon_mode',                  @ischar,                               'phase_space',           @strip};
