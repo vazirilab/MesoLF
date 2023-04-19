@@ -54,8 +54,8 @@ Typical installation time: 5 minutes. Download times depend on connection speed;
   
   % Some optional arguments
   myparams.frameRate = 18;  % frame rate of raw data
-  myparams.patch_mode = 'carpet';  % tile FOV into a "carpet" of crop_N by crop_N tiles
-  myparams.n_patches = 6;  % number of tiles per side
+  myparams.n_patches = 6;  % number of tiles per side to divide FOV into
+  myparams.patch_mode = 'carpet';  % tile FOV into a "carpet" of n_patches by n_patches tiles
   myparams.filt_method = 'cnn';  % use pre-trained CNN for final trace classification
   myparams.gpu_ids = [1 2];  % use GPUs 1 and 2
 
