@@ -30,7 +30,7 @@ Please submit any issues or questions to this repository's [issue tracker](https
 2. Ensure Matlab's `mex` compiler is configured with a compatible compiler, as listed here: https://www.mathworks.com/support/requirements/supported-compilers.html
 3. Change directory to subfolder `src/cuda` and run `build.m` to run the mexcuda compiler to build CUDA and C++/MEX binaries. This should result in a file `mex_lfm_convolution_vec.mexa64` (file extension may differ depending on platform)
 4. [Download zip file](https://zenodo.org/record/7306113/files/mesolf_cnn_svm_models.zip?download=1) (1 GB) containing trained CNN and SVM models for calcium trace classification, and place the files contained in the zip file into folder `utility/`
-5. [Download simulated point spread function file](https://zenodo.org/record/7306113/files/PSFmatrix_lfm2pram_M10_FN12p5_pm200_from-200_to200_zspacing4_Nnum15_lambda520_OSR3.mat?download=1) (.mat, 3.3 GB) and save it to an arbitrary directory, which we refer to below as `<psfdir>`
+5. [Download simulated point spread function file](https://zenodo.org/record/7306113/files/PSFmatrix_lfm2pram_M10_FN12p5_pm200_from-200_to200_zspacing4_Nnum15_lambda520_OSR3.mat?download=1) (.mat, 3.3 GB) and save it to an arbitrary directory, which we refer to below as `<psfdir>`. PSF files for optical systems other than MesoLF can be generated using the function `computePSF_GUI()` that was published as Supplementary Software with [Prevedel et al., Nature Methods (2014)](https://www.nature.com/articles/nmeth.2964#MOESM188).
 
 Typical installation time: 5 minutes. Download times depend on connection speed; should be <1 hour on a reasonably fast connection
 
