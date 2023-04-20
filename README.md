@@ -8,6 +8,8 @@ Nöbauer*, T., Zhang*, Y., Kim, H. & Vaziri, A.
 [*Mesoscale volumetric light-field (MesoLF) imaging of neuroactivity across cortical areas at 18 Hz.*](https://www.nature.com/articles/s41592-023-01789-z)  
 Nature Methods 20(4) (2023). doi:10.1038/s41592-023-01789-z
 
+Auxiliary data (trained models, PSF, demo data; see placement instructions in the Installation section below) is available on Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7306113.svg)](https://doi.org/10.5281/zenodo.7306113)
+
 Please submit any issues or questions to this repository's [issue tracker](https://github.com/vazirilab/mesolf/issues).
 
 ## System requirements
@@ -27,8 +29,8 @@ Please submit any issues or questions to this repository's [issue tracker](https
 1. Add folder containing `mesolf.m` and all subfolders to Matlab path
 2. Ensure Matlab's `mex` compiler is configured with a compatible compiler, as listed here: https://www.mathworks.com/support/requirements/supported-compilers.html
 3. Change directory to subfolder `src/cuda` and run `build.m` to run the mexcuda compiler to build CUDA and C++/MEX binaries. This should result in a file `mex_lfm_convolution_vec.mexa64` (file extension may differ depending on platform)
-4. Download zip file (1 GB) containing trained CNN and SVM models for calcium trace classification, and place the files contained in the zip file into folder `utility/`: https://zenodo.org/api/files/54c6ca75-b55e-4ff8-9dfd-e740690a8809/mesolf_cnn_svm_models.zip?versionId=fd039022-6b9a-4b91-99b6-2da9bb056669
-5. Download simulated point spread function file (.mat, 3.3 GB) and save it to an arbitrary directory, which we refer to below as `<psfdir>`: https://zenodo.org/api/files/54c6ca75-b55e-4ff8-9dfd-e740690a8809/PSFmatrix_lfm2pram_M10_FN12p5_pm200_from-200_to200_zspacing4_Nnum15_lambda520_OSR3.mat?versionId=e56561b5-7a91-43cf-9837-4e9002671b98
+4. [Download zip file](https://zenodo.org/record/7306113/files/mesolf_cnn_svm_models.zip?download=1) (1 GB) containing trained CNN and SVM models for calcium trace classification, and place the files contained in the zip file into folder `utility/`
+5. [Download simulated point spread function file](https://zenodo.org/record/7306113/files/PSFmatrix_lfm2pram_M10_FN12p5_pm200_from-200_to200_zspacing4_Nnum15_lambda520_OSR3.mat?download=1) (.mat, 3.3 GB) and save it to an arbitrary directory, which we refer to below as `<psfdir>`
 
 Typical installation time: 5 minutes. Download times depend on connection speed; should be <1 hour on a reasonably fast connection
 
