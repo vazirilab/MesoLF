@@ -34,22 +34,11 @@ if isa(SI.mask_file, 'char')
     mask = loadtiff(SI.mask_file);
 elseif SI.mask_file == true
     [mfilepath, ~, ~] = fileparts(mfilename('fullpath'));
-    mask_file_default = [mfilepath filesep() 'utility' filesep() 'outside_mask.tif']
+    mask_file_default = [mfilepath filesep() 'utility' filesep() 'outside_mask.tif'];
     mask = loadtiff(mask_file_default);
 else
     mask = [];
 end
-
-%% Prepare parallel pool
-cluster = parcluster('local');
-cluster.NumWorkers = floor(feature('numcores') / 4);
-cluster.NumThreads = 4;
-job_storage_location = tempname();
-mkdir(job_storage_location);
-cluster.JobStorageLocation = job_storage_location;
-disp(cluster);
-delete(gcp('nocreate'));
-pool = parpool(cluster, 'IdleTimeout', 600); %#ok<NASGU>
 
 %% Main loop over patches
 if SI.worker_ix == 0
