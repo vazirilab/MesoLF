@@ -35,7 +35,7 @@ Please submit any issues or questions to this repository's [issue tracker](https
 Typical installation time: 5 minutes. Download times depend on connection speed; should be <1 hour on a reasonably fast connection
 
 ## Usage
-* See comments in `src/mesolf_set_params.m` for documentation of required and optional arguments
+* See comments in [`src/mesolf_set_params.m`](src/mesolf_set_params.m) for documentation of required and optional arguments
 * A complete demo is provided as a Matlab live script, `mesolf_demo.mlx`, which downloads a ~33 GB demo dataset (two patches of ~600 × 600 μm field of view each, 7-minute MesoLF recording at 18 fps from mouse cortex labelled with SomaGCaMP7f, depth range 0–200 μm), sets parameters, runs the full MesoLF pipeline and plots the results for inspection. The demo requires ~60 GB of RAM and took 18 minutes to run on a workstation with two Intel Xeon Gold 6136 3.00GHz CPUs with 12 cores each, 260 GB RAM, and a 1 TB NVMe SSD hard disk. One nVidia TITAN V GPU with 12 GB RAM was used.
 * In general, to run the MesoLF pipeline, pass at least the required arguments to the main function, `mesolf()`. Arguments can be passed in two alternative ways:
   1. As a single struct with fields named like the parameters defined in mesolf_set_params.m
